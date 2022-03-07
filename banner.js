@@ -13,12 +13,12 @@ const slideList = [
    }];
 
 const image = document.querySelector('.slider__img');
-const text = document.querySelector('.slider__txt');
 const dots = [...document.querySelectorAll('.slider__dots span')];
+const text = document.querySelector('.slider__txt');
 
 // Interface
-const time = 3000;
 let active = 0;
+const time = 3000;
 
 // Implementations
 const changeDot = () => {
@@ -38,7 +38,7 @@ const changeSlide = () => {
 };
 
 // Keys
-const keyChangeSlide = (e) => {
+const keyChangeSlide = e => {
    if (e.keyCode === 37 || e.keyCode === 39) {
       clearInterval(indexInterval);
       e.keyCode === 37 ? active-- : active++;
